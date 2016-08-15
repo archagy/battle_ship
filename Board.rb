@@ -31,6 +31,14 @@ class Board
     @boats_matrix
   end
 
+  def attack position
+    if @matrix[position[0]][position[1]] == "*"
+      if @matrix[position[0]][position[1]] == 0
+        @matrix[position[0]][position[1]] = "X" 
+      end
+    end
+  end
+
   private
 
   def build_matrix
